@@ -1,0 +1,37 @@
+{
+	"name": "cms-implementer",
+  "version": "1.0.0",
+  "description": "A NodeJS-based backend for implementing GraphQL CMS.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production keystone build",
+    "create-tables": "cross-env keystone create-tables"
+		"dev": "cross-env NODE_ENV=development DISABLE_LOGGING=true PORT=5000 keystone dev",
+		"prod": "cross-env NODE_ENV=production keystone start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/universal-projects/cms-implementer.git"
+  },
+  "keywords": [
+    "cms",
+    "implementer",
+    "cms-implementer"
+  ],
+  "author": "Michael K Macharia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/universal-projects/cms-implementer/issues"
+  },
+  "homepage": "https://github.com/universal-projects/cms-implementer#readme",
+  "dependencies": {
+    "@keystonejs/adapter-mongoose": "^11.0.0",
+    "@keystonejs/app-admin-ui": "^7.3.8",
+    "@keystonejs/app-graphql": "^6.2.0",
+    "@keystonejs/auth-password": "^6.0.0",
+    "@keystonejs/keystone": "^19.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0"
+  }
+}
